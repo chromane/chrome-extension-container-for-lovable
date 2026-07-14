@@ -1,0 +1,5 @@
+[role='button'][data-eventid] {
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 300ms;
+}

@@ -1,0 +1,96 @@
+:host,
+:root,
+html {
+  /*  */
+  --color-border: rgba(0, 0, 0, 0.12);
+  --gradient-primary-light: linear-gradient(150deg, #0f5213 -2.68%, #010f0c 116.81%);
+  --gradient-primary: linear-gradient(135deg, #1c2b59 -2.68%, #1c2b59 116.81%);
+  /*  */
+  /* common */
+  --color-border: rgba(0, 0, 0, 0.12);
+  /* project */
+  --color-primary: #1c2b59;
+  --color-primary-dark: #0f1938;
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-accent: #ff8001;
+  --color-accent-light: #ff80001a;
+
+  --color-primary-black: #222222;
+  --color-primary-grayscale: #e8e8e8;
+  --color-primary-white: #fdfdfd;
+  --color-primary-orange: #e14500;
+  --color-primary-green: #222222;
+  --color-primary-red: #b3261e;
+  --color-primary-highlight: #e145001a;
+  --color-secondary-grayscale: #b1b1b1;
+  --color-secondary-dark-orange: #ad3500;
+  --color-secondary-bright-orange: #ff4c00;
+  --color-secondary-red: #9f130b;
+  --color-secondary-gray: #9a9a9a;
+  --color-secondary-highlight: #e1450080;
+  --color-ttip-gray: #414141;
+  --color-divider-gray: #dfdfdf;
+  --color-light-gray: #f3f3f3;
+  /*  */
+  --color-h1: rgba(0, 0, 0, 0.85);
+  --color-border: rgba(0, 0, 0, 0.12);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.page {
+  .page-inner {
+  }
+  .name-value-cont {
+    padding: 4px 24px 4px 12px;
+    border-left: 1px solid var(--color-primary);
+  }
+  .section {
+    width: 100%;
+    max-width: 520px;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .title {
+      color: black;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .text {
+      color: black;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+/* Screenshot demo fullscreen modifiers */
+
+#app.fullscreen {
+  #header {
+    display: none !important;
+  }
+  .page_container {
+    height: 100% !important;
+  }
+}

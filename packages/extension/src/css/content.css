@@ -1,0 +1,13 @@
+.chromane-shadow-root-host {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2147483647 !important;
+}
+#vue-app-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 520px;
+  height: 620px;
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@shared/*": ["../shared/*"],
+      "@tests/*": ["../tests/*"],
+      "@back/*": ["../back/*"]
+    },
+    "lib": ["DOM", "ES2015.Core", "DOM.Iterable", "ES2015.Collection", "ES2015.Iterable", "ES2015", "ES2021.String", "ES2022.Array"],
+    // "module": "ES6",                                /* Specify what module code is generated. */
+    // "outDir": "./temp_dist_ts" /* Specify an output folder for all emitted files. */,
+    "module": "ES6" /* Specify what module code is generated. */,
+    "types": ["chrome"]
+  },
+  "references": [{ "path": "../shared/" }],
+  "include": ["src", "types.d.ts"],
+  "exclude": ["node_modules"]
+}

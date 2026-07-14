@@ -1,0 +1,15 @@
+{
+  "mode": "prod",
+  "name": "chrome-extension-container-for-lovable",
+  "ui_title": "chrome-extension-container-for-lovable",
+  "ext_name": "demo",
+  "zip_name": "demo",
+  "fb_id": "chromane-demo",
+  "gc_id": "chromane-demo",
+  "gc_public_bucket_id": "demo-x",
+  "gc_front_bucket_id": "demo-x",
+  "ext_id": "obahmmnnholklfobjilohfgdhjglfefi",
+  "extension_id": "obahmmnnholklfobjilohfgdhjglfefi",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzQoAgZaxu+EZn76xQ9AOKlWSe7MbcQZ4gI11DBO45Se+grs68jr1LmLRLOUuoblwmBHtQVWUBqiqkNF85uIzUcNwWfwo2kXFQpd/FSUfnaKR9uRcjVYHH9pU5zGJTJub/hmXVEN82R8rVVgczJm/YDEFmbYQfI+UgwFHaSfLsRClp938URiQstqMkykXQbkppjfYzDxAD+v7HAS+p9QJHURx+aA7qoydlkZft3pWrpjYtyvlnV0RehGdHQM2Lv73AjibSv1205PuputnIhC4596RPJiBOjuW9NiJulhbUmtyqNEXNcR/7p8OmtHBz0dDEZN1RPKtSneOhqTy2VSETQIDAQAB",
+  "google_client_id": ""
+}

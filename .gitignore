@@ -1,0 +1,29 @@
+# node_modules
+**/node_modules
+
+# temp files
+**/temp_extension_webpack
+**/temp_extension_install
+**/temp_extension_build
+**/temp_frontend_webpack
+**/temp_frontend_build
+**/temp_ext_install
+**/temp_ext_build
+**/temp_ext_webpack
+**/temp_tests
+**/temp_user_data_dir
+
+# package-lock
+**/package-lock.json
+
+# big test files
+/document.pdf
+/test.json
+/image.jpg
+/image.png
+/temp
+packages/tests/data/*
+
+# secrets
+.env
+.google_service_account.json

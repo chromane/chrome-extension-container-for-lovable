@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "chrome-extension-container-for-lovable",
+  "description": "chrome-extension-container-for-lovable",
+  "icons": {
+    "128": "img/logo-128.png"
+  },
+  "action": {
+    "default_icon": "img/logo-128.png"
+  },
+  "background": {
+    "service_worker": "webpack/scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "world": "ISOLATED",
+      "all_frames": false,
+      "run_at": "document_idle",
+      "matches": ["https://*.chromane.com/*"],
+      "js": ["webpack/scripts/content_isolated.js"]
+    }
+  ],
+  "permissions": ["activeTab", "storage", "sidePanel"],
+  "host_permissions": ["https://*.chromane.com/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["*"],
+      "matches": ["https://*/*"],
+      "extension_ids": []
+    }
+  ]
+}

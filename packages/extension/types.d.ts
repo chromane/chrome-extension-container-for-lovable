@@ -1,0 +1,8 @@
+declare module "*.txt";
+declare module "*.html";
+declare module "*.css";
+declare module "*.svg";
+declare module "*.txt?raw";
+declare module "*.html?raw";
+declare module "*.css?raw";
+declare module "*.svg?raw";

@@ -1,0 +1,24 @@
+{
+  "name": "chrome-extension-container-for-lovable",
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "dev": "node ./scripts/run_dev.ts",
+    "build": "node ./scripts/run_build.ts",
+    "install_all": "node ./scripts/run_install_all.ts"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.290",
+    "@types/fs-extra": "^11.0.4",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.13"
+  }
+}

@@ -1,0 +1,28 @@
+.buttons-h {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  /* .button {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  } */
+  .button:last-child {
+    margin-right: 0px;
+  }
+}
+.buttons-v {
+  display: flex;
+  flex-direction: column;
+  .button {
+    margin-bottom: 8px;
+  }
+  .button:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
