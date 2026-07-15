@@ -1,0 +1,13 @@
+.app {
+  .header {
+    height: 42px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .drawer {
+    display: none;
+    &.drawer-open {
+      display: block;
+      width: 240px;
+    }
+  }
+}
