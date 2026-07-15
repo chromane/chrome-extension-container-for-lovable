@@ -18,6 +18,7 @@ const App = () => {
   }
   return (
     <div className='app'>
+      {/* Header */}
       <div className='header flex items-center justify-between'>
         <div onClick={toggleMenu}>
           <Menu size={16} />
@@ -27,6 +28,7 @@ const App = () => {
           <X size={16} />
         </div>
       </div>
+      {/* Pages */}
       <div className='page-container'>
         {activePageName === 'page1' && (
           <div className='page'>
@@ -47,26 +49,32 @@ const App = () => {
           </div>
         )}
       </div>
-      <div className={cn('drawer', { 'drawer-open': menuOpen })}>
-        <div className='drawer-header'>drawer header</div>
-        <div className='drawer-content'>
-          <div>drawer content</div>
-          <div
-            onClick={() => {
-              setActivePageName('page1');
-            }}
-          >
-            page1
-          </div>
-          <div
-            onClick={() => {
-              setActivePageName('page2');
-            }}
-          >
-            page2
+      {/* Drawer */}
+      <div className={cn('drawer', { 'drawer-open': menuOpen })} onClick={() => setMenuOpen(false)}>
+        <div className='drawer-body'>
+          <div className='drawer-header'>drawer header</div>
+          <div className='drawer-content'>
+            <div>drawer content</div>
+            <div
+              onClick={() => {
+                setActivePageName('page1');
+              }}
+            >
+              page1
+            </div>
+            <div
+              onClick={() => {
+                setActivePageName('page2');
+              }}
+            >
+              page2
+            </div>
           </div>
         </div>
       </div>
+      {/* Toasts */}
+      {/* Dialogs */}
+      {/* Blocking overlay */}
     </div>
   );
 };
