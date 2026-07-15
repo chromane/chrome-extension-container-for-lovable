@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chrome-extension-container-for-lovable</title>
+  <style>
+    html,
+    body,
+    #vue-app-root {
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    html.sidepanel {
+      width: 100%;
+      height: 100%;
+
+    }
+
+    html {
+      --color-border: rgba(0, 0, 0, 0.12);
+      --color-primary: #043a07;
+      --gradient-primary-light: linear-gradient(150deg, #0f5213 -2.68%, #010f0c 116.81%);
+      --gradient-primary: linear-gradient(135deg, #043a07 -2.68%, #010f0c 116.81%);
+    }
+
+    .background-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 300;
+      background-image: url('/img/background.svg'), linear-gradient(135deg, #145f9e 0%, #1d2b59 40%, #0e1735 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ctrl_frame from '@src/ts/ctrl_frame';
 import PageMain from '../pages/PageMain.vue';
-import PageCraigslist from '../pages/PageCraigslist.vue';
 import PageAuth from '../pages/PageAuth.vue';
 import PageFeedback from '../pages/PageFeedback.vue';
 import PagePopup from '../pages/PagePopup.vue';

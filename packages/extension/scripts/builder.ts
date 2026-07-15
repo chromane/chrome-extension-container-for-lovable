@@ -136,6 +136,10 @@ function get_webpack_config(mode: string) {
       import: './src/entry/iframe/main.ts',
       filename: './iframe/[name].js',
     },
+    react: {
+      import: './src/entry/react/main.tsx',
+      filename: './react/[name].js',
+    },
     redirect: {
       import: './src/entry/redirect/main.ts',
       filename: './redirect/[name].js',
@@ -161,6 +165,11 @@ function get_webpack_config(mode: string) {
       template: _pr('.', 'src', 'entry', 'iframe', `index.html`),
       filename: `./iframe/index.html`,
       chunks: ['iframe'],
+    }),
+    new HtmlWebpackPlugin({
+      template: _pr('.', 'src', 'entry', 'react', `index.html`),
+      filename: `./react/index.html`,
+      chunks: ['react'],
     }),
     new HtmlWebpackPlugin({
       template: _pr('.', 'src', 'entry', 'redirect', `index.html`),

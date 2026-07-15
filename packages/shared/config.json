@@ -1,5 +1,5 @@
 {
-  "mode": "prod",
+  "mode": "dev",
   "name": "chrome-extension-container-for-lovable",
   "ui_title": "chrome-extension-container-for-lovable",
   "ext_name": "demo",

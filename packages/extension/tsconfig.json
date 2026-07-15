@@ -9,9 +9,8 @@
       "@back/*": ["../back/*"]
     },
     "lib": ["DOM", "ES2015.Core", "DOM.Iterable", "ES2015.Collection", "ES2015.Iterable", "ES2015", "ES2021.String", "ES2022.Array"],
-    // "module": "ES6",                                /* Specify what module code is generated. */
-    // "outDir": "./temp_dist_ts" /* Specify an output folder for all emitted files. */,
-    "module": "ES6" /* Specify what module code is generated. */,
+    "module": "ES6",
+    "jsx": "react-jsx",
     "types": ["chrome"]
   },
   "references": [{ "path": "../shared/" }],
