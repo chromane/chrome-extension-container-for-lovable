@@ -1,7 +1,7 @@
 import React from 'react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { X, Menu } from 'lucide-react';
+import { X, Menu, CircleFadingArrowUpIcon } from 'lucide-react';
 import { Button } from '@src/components/ui/button';
 
 function cn(...inputs: ClassValue[]) {
@@ -24,14 +24,13 @@ const App = () => {
     <div className='app'>
       {/* Header */}
       <div className='header flex items-center justify-between'>
-        <div onClick={toggleMenu}>
+        <Button variant='outline' size='icon' onClick={toggleMenu}>
           <Menu size={16} />
-        </div>
-        <Button variant='outline'>Button</Button>
+        </Button>
         header{number_of_renders}
-        <div>
+        <Button variant='outline' size='icon'>
           <X size={16} />
-        </div>
+        </Button>
       </div>
       {/* Pages */}
       <div className='page-container'>

@@ -11,7 +11,7 @@ body,
 .app {
   position: relative;
   .header {
-    height: 42px;
+    padding: 4px 12px;
     border-bottom: 1px solid #e5e7eb;
   }
   .drawer {
