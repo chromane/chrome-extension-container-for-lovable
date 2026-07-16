@@ -75,6 +75,7 @@ function get_webpack_config(mode: string) {
     modules: [path.resolve('.', 'node_modules')],
     extensions: ['.ts', '.js', '.tsx', '.css', '.vue'],
     alias: {
+      '@': _pr(dirnames.extension),
       '@src': _pr(dirnames.extension, 'src'),
       '@shared': dirnames.shared,
       '@tests': dirnames.tests,

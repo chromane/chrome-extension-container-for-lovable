@@ -2,6 +2,7 @@ import React from 'react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { X, Menu } from 'lucide-react';
+import { Button } from '@src/components/ui/button';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -26,6 +27,7 @@ const App = () => {
         <div onClick={toggleMenu}>
           <Menu size={16} />
         </div>
+        <Button variant='outline'>Button</Button>
         header{number_of_renders}
         <div>
           <X size={16} />
