@@ -7,7 +7,10 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+let number_of_renders = 0;
+
 const App = () => {
+  number_of_renders++;
   let [a, setA] = React.useState(1);
   let [b, setB] = React.useState(2);
   let [activePageName, setActivePageName] = React.useState('page1');
@@ -23,7 +26,7 @@ const App = () => {
         <div onClick={toggleMenu}>
           <Menu size={16} />
         </div>
-        header
+        header{number_of_renders}
         <div>
           <X size={16} />
         </div>
@@ -34,6 +37,7 @@ const App = () => {
           <div className='page'>
             page1
             <div>react test {a + b}</div>
+            <button onClick={() => setA(a + 0)}>+0</button>
             <button onClick={() => setA(a + 1)}>+1</button>
             <button onClick={() => setB(b + 1)}>+1</button>
             <button onClick={() => setActivePageName('page2')}>go to page2</button>

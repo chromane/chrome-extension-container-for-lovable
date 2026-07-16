@@ -15,7 +15,8 @@ body,
     border-bottom: 1px solid #e5e7eb;
   }
   .drawer {
-    display: none;
+    display: block;
+    visibility: hidden;
     position: absolute;
     z-index: 3000;
     top: 0px;
@@ -32,6 +33,7 @@ body,
       width: 257px;
       height: 100%;
       background-color: #ffffff;
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
       transition: all 0.2s ease;
       .section-headline {
         font-size: 14px;
@@ -43,16 +45,17 @@ body,
     }
     &.drawer-open {
       display: block;
+      visibility: visible;
       background-color: rgba(0, 0, 0, 0.382);
       .drawer-body {
-        position: absolute;
-        top: 0px;
         left: 0px;
-        width: 257px;
-        height: 100%;
         background-color: #ffffff;
-        transition: all 0.2s ease;
       }
     }
+  }
+  button {
+    margin: 4px;
+    padding: 4px;
+    border: 1px solid #e5e7eb;
   }
 }
