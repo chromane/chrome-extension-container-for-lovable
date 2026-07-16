@@ -6,13 +6,18 @@ body,
   height: 100%;
   margin: 0px;
   padding: 0px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Geist', sans-serif;
 }
 .app {
   position: relative;
   .header {
     padding: 4px 12px;
     border-bottom: 1px solid #e5e7eb;
+  }
+  .page-container {
+    .page {
+      padding: 16px;
+    }
   }
   .drawer {
     display: block;

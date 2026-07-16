@@ -1,7 +1,9 @@
 import React from 'react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { X, Menu, CircleFadingArrowUpIcon, Home, Settings } from 'lucide-react';
+import { X, Menu, CircleFadingArrowUpIcon, Home, Settings as IconSettings, User, Users as IconUsers } from 'lucide-react';
+import Users from './pages/Users';
+import Settings from './pages/Settings';
 import { Button } from '@src/components/ui/button';
 import logo_svg from '@shared/slots/logo-main.svg?raw';
 
@@ -15,7 +17,7 @@ const App = () => {
   number_of_renders++;
   let [a, setA] = React.useState(1);
   let [b, setB] = React.useState(2);
-  let [activePageName, setActivePageName] = React.useState('page1');
+  let [activePageName, setActivePageName] = React.useState('users');
   let [menuOpen, setMenuOpen] = React.useState(false);
 
   function toggleMenu() {
@@ -61,6 +63,16 @@ const App = () => {
             <button onClick={() => setActivePageName('page1')}>go to page1</button>
           </div>
         )}
+        {activePageName === 'settings' && (
+          <div className='page'>
+            <Settings />
+          </div>
+        )}
+        {activePageName === 'users' && (
+          <div className='page'>
+            <Users />
+          </div>
+        )}
       </div>
       {/* Drawer */}
       <div className={cn('drawer', { 'drawer-open': menuOpen })} onClick={() => setMenuOpen(false)}>
@@ -81,8 +93,19 @@ const App = () => {
                 <span>Page 2</span>
               </div>
               <div className={cn('drawer-content-item', { active: activePageName === 'settings' })} onClick={handle_drawer_item_click('settings')}>
-                <Settings size={16} />
+                <IconSettings size={16} />
                 <span>Settings</span>
+              </div>
+              <div className={cn('drawer-content-item', { active: activePageName === 'users' })} onClick={handle_drawer_item_click('users')}>
+                <IconUsers size={16} />
+                <span>Users</span>
+              </div>{' '}
+              <div
+                className={cn('drawer-content-item', { active: activePageName === 'my_account' })}
+                onClick={handle_drawer_item_click('my_account')}
+              >
+                <User size={16} />
+                <span>My account</span>
               </div>
             </div>
           </div>
@@ -94,5 +117,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
