@@ -19,8 +19,8 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 import example_response_txt from '@shared/data/example_response.txt?raw';
 //
 // vue app
-import App from '@src/vue/App.vue';
-import { createApp } from 'vue';
+// import App from '@src/vue/App.vue';
+// import { createApp } from 'vue';
 import ctrl_frame from '@src/ts/ctrl_frame';
 import console_log from '@shared/ts/console_log';
 import ctrl_content from './ctrl_content';
@@ -408,18 +408,18 @@ export default class Popup {
     this.set_container_mode(ContainerMode.popup);
     this.set_progress_status('active');
     //
-    const app_vue = createApp(App);
-    app_vue.config.globalProperties.ctrl = ctrl_frame;
+    // const app_vue = createApp(App);
+    // app_vue.config.globalProperties.ctrl = ctrl_frame;
     //
     // Tippy
-    app_vue.use(VueTippy, {
-      directive: 'tippy', // => v-tippy
-    });
+    // app_vue.use(VueTippy, {
+    //   directive: 'tippy', // => v-tippy
+    // });
     //
     ctrl_frame.init();
     //
     //
-    app_vue.mount(this.container.querySelector('#vue-app-root'));
+    // app_vue.mount(this.container.querySelector('#vue-app-root'));
     //
     // this.iframe = this.container.querySelector("iframe");
     // this.iframe.name = "chromane-popup";

@@ -16,7 +16,7 @@
       "world": "ISOLATED",
       "all_frames": false,
       "run_at": "document_idle",
-      "matches": ["https://*.chromane.com/*"],
+      "matches": ["https://*.chromane.com/*", "https://bashvlas.com/*"],
       "js": ["webpack/scripts/content_isolated.js"]
     }
   ],
