@@ -1,9 +1,10 @@
-import React from 'react';
+import { useState } from 'react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { X, Menu, CircleFadingArrowUpIcon, Home, Settings as IconSettings, User, Users as IconUsers } from 'lucide-react';
-import Users from './pages/Users';
-import Settings from './pages/Settings';
+import { X, Menu, CircleFadingArrowUpIcon, Home, Settings as IconSettings, User, Users as IconUsers, LogIn, LogOut, Logs } from 'lucide-react';
+import Users from './pages/PageUsers';
+import Settings from './pages/PageSettings';
+import PageAuth from './pages/PageAuth';
 import { Button } from '@src/components/ui/button';
 import logo_svg from '@shared/slots/logo-main.svg?raw';
 
@@ -15,10 +16,10 @@ let number_of_renders = 0;
 
 const App = () => {
   number_of_renders++;
-  let [a, setA] = React.useState(1);
-  let [b, setB] = React.useState(2);
-  let [activePageName, setActivePageName] = React.useState('users');
-  let [menuOpen, setMenuOpen] = React.useState(false);
+  let [a, setA] = useState(1);
+  let [b, setB] = useState(2);
+  let [activePageName, setActivePageName] = useState('auth');
+  let [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
@@ -30,6 +31,7 @@ const App = () => {
       setMenuOpen(false);
     };
   }
+
   return (
     <div className='app'>
       {/* Header */}
@@ -73,6 +75,11 @@ const App = () => {
             <Users />
           </div>
         )}
+        {activePageName === 'auth' && (
+          <div className='page'>
+            <PageAuth />
+          </div>
+        )}
       </div>
       {/* Drawer */}
       <div className={cn('drawer', { 'drawer-open': menuOpen })} onClick={() => setMenuOpen(false)}>
@@ -99,13 +106,25 @@ const App = () => {
               <div className={cn('drawer-content-item', { active: activePageName === 'users' })} onClick={handle_drawer_item_click('users')}>
                 <IconUsers size={16} />
                 <span>Users</span>
-              </div>{' '}
+              </div>
+              <div className={cn('drawer-content-item', { active: activePageName === 'logs' })} onClick={handle_drawer_item_click('logs')}>
+                <Logs size={16} />
+                <span>Logs</span>
+              </div>
               <div
                 className={cn('drawer-content-item', { active: activePageName === 'my_account' })}
                 onClick={handle_drawer_item_click('my_account')}
               >
                 <User size={16} />
                 <span>My account</span>
+              </div>
+              <div className={cn('drawer-content-item', { active: activePageName === 'auth' })} onClick={handle_drawer_item_click('auth')}>
+                <LogIn size={16} />
+                <span>Log in</span>
+              </div>
+              <div className={cn('drawer-content-item', { active: activePageName === 'log_out' })} onClick={handle_drawer_item_click('log_out')}>
+                <LogOut size={16} />
+                <span>Log out</span>
               </div>
             </div>
           </div>
@@ -117,4 +136,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;

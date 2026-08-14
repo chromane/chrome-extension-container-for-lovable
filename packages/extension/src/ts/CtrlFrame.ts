@@ -1,4 +1,4 @@
-import { watch } from 'vue';
+// import { watch } from 'vue';
 import { clone, decode_jwt, decode_url_state, get_id } from '@shared/ts/helpers';
 import ctrl_content from './ctrl_content';
 import console_log from '@shared/ts/console_log';
@@ -40,7 +40,7 @@ class CtrlFrame {
   dialogs: ModuleDialogs;
   tab_storage: ModuleTabStorage;
   chrome_storage: ModuleChromeStorage;
-
+  //
   constructor() {
     this.proxy_extension_iframe = new ModuleExtensionApis();
     this.auth = new ModuleAuth();
@@ -56,6 +56,8 @@ class CtrlFrame {
   tab_id: any;
   tab_info: any;
   async init() {
+    //
+    console_log('CtrlFrame init');
     //
     this.window_name = window.name;
     this.pages = [];
@@ -172,21 +174,21 @@ class CtrlFrame {
   }
   //
   async watch_vue() {
-    watch(
-      () => store.number_of_blocking_operations,
-      async () => {
-        if (this.context === 'content') {
-          if (store.number_of_blocking_operations === 0) {
-            // ctrl_content.popup.set_progress_status("not-active");
-          } else {
-            // ctrl_content.popup.set_progress_status("active");
-          }
-        }
-      },
-      {
-        immediate: true,
-      }
-    );
+    // watch(
+    //   () => store.number_of_blocking_operations,
+    //   async () => {
+    //     if (this.context === 'content') {
+    //       if (store.number_of_blocking_operations === 0) {
+    //         // ctrl_content.popup.set_progress_status("not-active");
+    //       } else {
+    //         // ctrl_content.popup.set_progress_status("active");
+    //       }
+    //     }
+    //   },
+    //   {
+    //     immediate: true,
+    //   }
+    // );
     // watch(
     //   () => store.chrome_storage,
     //   () => {

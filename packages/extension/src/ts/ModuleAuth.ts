@@ -25,12 +25,14 @@ export default class ModuleAuth {
       flow_type: 'log_in',
     });
     logger.log('url', url);
-    let result = await chrome.tabs.create({
-      active: true,
-      url,
-    });
-
-    logger.log('result', result);
+    //
+    window.open(url, '_blank');
+    // let result = await chrome.tabs.create({
+    //   active: true,
+    //   url,
+    // });
+    //
+    // logger.log('result', result);
   }
   async handle_google_code(code: string) {
     ctrl.blocking_inc();

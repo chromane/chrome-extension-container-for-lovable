@@ -3,6 +3,8 @@
   top: 0px;
   left: 0px;
   z-index: 2147483647 !important;
+  width: 520px;
+  height: 620px;
 }
 #vue-app-root {
   position: absolute;
