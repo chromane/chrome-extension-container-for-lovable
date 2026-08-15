@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "paths": {
+      "@root/*": ["../../*"],
+      "@shared/*": ["../shared/*"],
+      "@src/*": ["./src/*"]
+    },
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true
+  },
+  "compileOnSave": true,
+  "include": ["./**/*", "../shared"],
+  "exclude": ["node_modules"]
+}
