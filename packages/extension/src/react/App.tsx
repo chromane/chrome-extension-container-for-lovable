@@ -1,7 +1,22 @@
 import { useState } from 'react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { X, Menu, CircleFadingArrowUpIcon, Home, Settings as IconSettings, User, Users as IconUsers, LogIn, LogOut, Logs } from 'lucide-react';
+import {
+  X,
+  PanelRight,
+  SquareSquare,
+  Menu,
+  CircleFadingArrowUpIcon,
+  Home,
+  Settings as IconSettings,
+  User,
+  Users as IconUsers,
+  LogIn,
+  LogOut,
+  Logs,
+  PictureInPicture,
+  PictureInPicture2,
+} from 'lucide-react';
 import Users from './pages/PageUsers';
 import Settings from './pages/PageSettings';
 import PageAuth from './pages/PageAuth';
@@ -40,6 +55,12 @@ const App = () => {
           <Menu size={16} />
         </Button>
         header{number_of_renders}
+        <Button variant='outline' size='icon'>
+          <PanelRight size={16} />
+        </Button>
+        <Button variant='outline' size='icon'>
+          <PictureInPicture2 size={16} />
+        </Button>
         <Button variant='outline' size='icon'>
           <X size={16} />
         </Button>
