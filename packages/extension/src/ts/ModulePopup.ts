@@ -458,7 +458,7 @@ export default class Popup {
     this.dragging_overlay = this.container.querySelector('.chromane_iframe_dragging_overlay');
     //
     let mousemove_listener = (event) => {
-      // console_log('mousemove_listener', event);
+      console_log('mousemove_listener', event);
       this.dragging_flag = true;
       this.container.classList.add('chromane-dragging');
       //
