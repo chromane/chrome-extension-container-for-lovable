@@ -21,7 +21,7 @@
     }
   ],
   "permissions": ["activeTab", "storage", "sidePanel"],
-  "host_permissions": ["https://*.chromane.com/*"],
+  "host_permissions": ["https://*.chromane.com/*", "https://bashvlas.com/*", "https://www.linkedin.com/*"],
   "optional_host_permissions": ["https://*/*", "http://*/*"],
   "web_accessible_resources": [
     {

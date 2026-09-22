@@ -267,11 +267,11 @@ async function copy_from_temp_to_extension() {
   fs_extra.copySync(dirnames.temp_extension_webpack, _pr(dirnames.temp_extension_install, 'webpack'));
 }
 async function copy_compiled_css() {
-  fs_extra.copySync(
-    //
-    _pr(dirnames.temp_extension_webpack, 'content_isolated.css'),
-    _pr(dirnames.main, 'src', 'css', 'content_isolated_compiled.css')
-  );
+  // fs_extra.copySync(
+  //   //
+  //   _pr(dirnames.temp_extension_webpack, 'content_isolated.css'),
+  //   _pr(dirnames.main, 'src', 'css', 'content_isolated_compiled.css')
+  // );
 }
 
 async function move_build_extension_to_root() {

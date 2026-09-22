@@ -30,6 +30,7 @@ export default class ModuleProjectBackground {
       });
     });
     chrome.runtime.onInstalled.addListener((details) => {
+      console_log('onInstalled', details);
       if (details.reason === 'install') {
         chrome.tabs.create({
           url: chrome.runtime.getURL('webpack/iframe/index.html#tab'),
@@ -38,7 +39,8 @@ export default class ModuleProjectBackground {
       }
       // Reload related pages on install or update
       if (details.reason === 'install' || details.reason === 'update') {
-        chrome.tabs.query({ url: ['https://*.dialpad.com/*'] }, (tabs) => {
+        chrome.tabs.query({ url: ['https://www.linkedin.com/*'] }, (tabs) => {
+          console_log('Reloading related tabs', tabs);
           tabs.forEach((tab) => {
             if (tab.url && tab.url.startsWith('http')) {
               chrome.tabs.reload(tab.id);
