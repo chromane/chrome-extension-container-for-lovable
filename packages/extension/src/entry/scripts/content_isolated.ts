@@ -10,7 +10,8 @@ import ctrl_content_vue from '@src/ts/ctrl_content_vue';
 // proxies.create_window_api(config.ext_id, ctrl_frame, '*');
 
 async function main() {
-  await ctrl_content_vue.init();
-  await ctrl_content.init();
+  // await ctrl_content_vue.init();
+  // await ctrl_content.init();
+  console.log('content_isolated.ts main()');
 }
 main();
