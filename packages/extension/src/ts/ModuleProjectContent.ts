@@ -1,4 +1,4 @@
-import config from '@shared/config';
+import { element_to_simple_json } from './dom_to_simple_json';
 
 export default class ModuleProjectContent {
   constructor() {}
@@ -19,7 +19,6 @@ export default class ModuleProjectContent {
     } catch (e) {}
   }
   body_to_simple_json(body: HTMLElement) {
-    //
-    return { a: 1, b: 2 };
+    return element_to_simple_json(body);
   }
 }
